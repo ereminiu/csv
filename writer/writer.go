@@ -8,8 +8,7 @@ import (
 const filepath = "output.csv"
 
 func Write(records [][]string) error {
-	// хз что такое perm, вроде работает с любым числом
-	f, err := os.OpenFile(filepath, os.O_RDWR, 0755)
+	f, err := os.Create(filepath)
 	if err != nil {
 		return err
 	}
