@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/ereminiu/vlr/reader"
+)
 
 func main() {
-	fmt.Println(check(12))
-	fmt.Println(check(19))
+	fmt.Println(reader.FetchRecords())
 }
