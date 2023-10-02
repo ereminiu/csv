@@ -1,11 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
-	"github.com/ereminiu/vlr/reader"
+	"github.com/ereminiu/vlr/writer"
 )
 
 func main() {
-	fmt.Println(reader.FetchRecords())
+	r := [][]string{{"Ivan", "18"}, {"Katya", "26"}}
+	err := writer.Write(r)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
